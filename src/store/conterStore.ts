@@ -4,18 +4,20 @@ import { create } from "zustand";
 interface bookState {
 	books: BookType[];
 	favBooks: BookType[];
-	filteredBooks: BookType[];
+	genre: string;
+
 	getBooks: () => void;
 	removeBooks: (newBooks: BookType) => void;
 	addFavBooks: (newFavBooks: BookType) => void;
 	removeFavBooks: (newBooks: BookType) => void;
 	addBooks: (newFavBooks: BookType) => void;
+	setGenre: (newGenre: string) => void;
 }
 
 const useBookStore = create<bookState>((set) => ({
 	books: [],
 	favBooks: [],
-	filteredBooks: [],
+	genre: "Todos",
 
 	getBooks: async () => {
 		const res = await fetch("http://localhost:3000/library");
@@ -46,6 +48,11 @@ const useBookStore = create<bookState>((set) => ({
 	addBooks: (newFavBooks: BookType) =>
 		set((state) => ({
 			books: [...state.books, newFavBooks],
+		})),
+
+	setGenre: (newGenre: string) =>
+		set(() => ({
+			genre: newGenre,
 		})),
 }));
 

@@ -1,9 +1,11 @@
+import useBookStore from "../../store/conterStore";
 import "./Header.css";
 import React from "react";
 
 export type HeaderProps = {};
 
 const Header: React.FC<HeaderProps> = () => {
+	const { setGenre } = useBookStore();
 	return (
 		<header className="header">
 			<h1>Libros</h1>
@@ -14,7 +16,11 @@ const Header: React.FC<HeaderProps> = () => {
 				</div>
 				<div className="filter-genere">
 					<label htmlFor="generos"> Filtrar por genero</label>
-					<select name="generos" id="generos">
+					<select
+						name="generos"
+						id="generos"
+						onChange={(e) => setGenre(e.target.value)}
+					>
 						<option value="Todos">Todos</option>
 						<option value="Terror">Terror</option>
 						<option value="Ciencia ficción">Ciencia ficción</option>

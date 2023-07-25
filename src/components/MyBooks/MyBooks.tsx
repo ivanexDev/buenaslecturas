@@ -1,0 +1,22 @@
+import useBookStore from "../../store/conterStore";
+import { Libro } from "../Libro";
+import "./MyBooks.css";
+
+export type MyBooksProps = {};
+
+const MyBooks: React.FC<MyBooksProps> = () => {
+	const favBooks = useBookStore((state) => state.favBooks);
+
+	return (
+		<div className="mybooks">
+			<h2>Tengo {favBooks.length} libro(s) en mis favoritos</h2>
+			<div>
+				{favBooks.map((book, index) => (
+					<Libro data={book} add={false} key={`${index}-${book.book.title}`} />
+				))}
+			</div>
+		</div>
+	);
+};
+
+export default MyBooks;

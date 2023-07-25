@@ -1,0 +1,12 @@
+.allbooks div {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 25px;
+    align-items: center;
+
+}
+
+.allbooks {
+    width: 50%;
+}

@@ -1,0 +1,12 @@
+.mybooks div {
+
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 25px;
+    align-items: center;
+}
+
+.mybooks {
+    width: 50vw;
+}

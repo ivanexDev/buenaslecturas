@@ -1,6 +1,12 @@
+@font-face {
+    font-family: SanFrancisco;
+    src: url(./assets/Fonts/SFNSDisplay-Light.otf);
+}
+
 body {
     margin: 0;
     padding: 0;
     background-color: #202020;
     color: white;
+    font-family: SanFrancisco;
 }

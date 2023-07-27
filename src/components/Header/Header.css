@@ -1,4 +1,23 @@
 .header {
     width: 100vw;
-    height: 150px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header h1 {
+    margin: 0 50px;
+    font-weight: lighter;
+
+}
+
+.header span {
+    color: rgba(137, 137, 137, 0.772);
+    font-weight: 100;
+}
+
+.all-books-controllers {
+    display: flex;
+    gap: 30px;
 }

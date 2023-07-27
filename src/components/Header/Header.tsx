@@ -8,7 +8,9 @@ const Header: React.FC<HeaderProps> = () => {
 	const { setGenre } = useBookStore();
 	return (
 		<header className="header">
-			<h1>Libros</h1>
+			<h1>
+				buenas<span>lecturas</span>
+			</h1>
 			<div className="all-books-controllers">
 				<div className="filter-pages">
 					<label htmlFor="pages"> Filtrar por paginas</label>

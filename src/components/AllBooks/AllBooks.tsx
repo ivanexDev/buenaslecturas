@@ -19,7 +19,7 @@ const AllBooks: React.FC<AllBooksProps> = () => {
 
 	return (
 		<section className="allbooks">
-			<h2>Libros {count} </h2>
+			<h2>Libros disponibles: {count} </h2>
 			<div className="allbooks-container">
 				{books?.map((book, index) => {
 					if (book.book.genre === genre) {

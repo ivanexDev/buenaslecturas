@@ -29,7 +29,7 @@ const Libro: React.FC<LibroProps> = ({ data, add }) => {
 				<p className="book-description">{data.book.synopsis}</p>
 				<span> {data.book.genre}</span>
 			</div>
-			<AddRemoveButton />
+			<AddRemoveButton data={data} add={add} />
 		</div>
 	);
 };

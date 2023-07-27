@@ -1,3 +1,25 @@
-.addremovebutton {
-  
+.book-card-button {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: 200ms ease-in-out;
+}
+
+.add {
+    background-color: green;
+
+}
+
+.add:hover {
+    background-color: rgb(42, 171, 42);
+}
+
+.remove {
+    background-color: rgb(218, 2, 2)
+}
+
+.remove:hover {
+    background-color: rgb(155, 22, 22);
 }

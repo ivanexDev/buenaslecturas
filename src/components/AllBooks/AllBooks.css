@@ -1,6 +1,4 @@
-.allbooks {
-    width: 50vw;
-}
+.allbooks {}
 
 .allbooks-container {
     flex-direction: column;

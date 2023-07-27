@@ -1,0 +1,12 @@
+.allbooks {
+    display: flex;
+    flex-direction: column;
+}
+
+.allbooks-container {
+    flex-direction: column;
+}
+
+.allbooks h2 {
+    margin-left: 30px;
+}

@@ -6,6 +6,9 @@ export type HeaderProps = {};
 
 const Header: React.FC<HeaderProps> = () => {
 	const { setGenre } = useBookStore();
+	const { setNumberOfPages, numberOfPages } = useBookStore();
+
+	console.log(numberOfPages);
 	return (
 		<header className="header">
 			<h1>
@@ -14,8 +17,19 @@ const Header: React.FC<HeaderProps> = () => {
 			<div className="all-books-controllers">
 				<div className="filter-pages">
 					<label htmlFor="pages"> Filtrar por paginas</label>
-					<input type="range" min={0} max={1200} name="pages" id="pages" />
+					<input
+						type="range"
+						value={numberOfPages}
+						min={0}
+						max={1200}
+						name="pages"
+						id="pages"
+						onChange={(e) => {
+							setNumberOfPages(e.target.valueAsNumber);
+						}}
+					/>
 				</div>
+				<span className="number-of-pages">{numberOfPages}</span>
 				<div className="filter-genere">
 					<label htmlFor="generos"> Filtrar por genero</label>
 					<select

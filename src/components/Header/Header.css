@@ -6,6 +6,19 @@
     gap: 30px;
 }
 
+.filter-pages {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.filter-genere {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .header h1 {
     margin: 0 50px;
     font-weight: lighter;
@@ -20,4 +33,8 @@
 .all-books-controllers {
     display: flex;
     gap: 30px;
+}
+
+.number-of-pages {
+    width: 40px;
 }

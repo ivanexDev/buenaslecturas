@@ -1,11 +1,13 @@
 import db from "../../db.json";
 import { BookType } from "../interfaces/api.interface";
 import { create } from "zustand";
+import { shallow } from "zustand/shallow";
 
 interface bookState {
 	books: BookType[];
 	favBooks: BookType[];
 	genre: string;
+	numberOfPages: number;
 
 	getBooks: () => void;
 	removeBooks: (newBooks: BookType) => void;
@@ -13,12 +15,14 @@ interface bookState {
 	removeFavBooks: (newBooks: BookType) => void;
 	addBooks: (newFavBooks: BookType) => void;
 	setGenre: (newGenre: string) => void;
+	setNumberOfPages: (newNumberOfBooks: number) => void;
 }
 
 const useBookStore = create<bookState>((set) => ({
 	books: [],
 	favBooks: [],
 	genre: "Todos",
+	numberOfPages: 1200,
 
 	getBooks: async () => {
 		const allBooks = await db.library;
@@ -53,6 +57,10 @@ const useBookStore = create<bookState>((set) => ({
 	setGenre: (newGenre: string) =>
 		set(() => ({
 			genre: newGenre,
+		})),
+	setNumberOfPages: (newNumberOfPages: number) =>
+		set(() => ({
+			numberOfPages: newNumberOfPages,
 		})),
 }));
 

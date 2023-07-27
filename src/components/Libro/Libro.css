@@ -5,9 +5,7 @@
 }
 
 .book-card {
-    width: 70%;
     height: 120px;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,4 +29,35 @@
     font-size: 12px;
     width: 40ch;
     margin: 10px 0;
+}
+
+/* Animations */
+
+.scale-up-hor-center {
+    -webkit-animation: scale-up-hor-center 700ms ease-in both;
+    animation: scale-up-hor-center 700ms ease-in both;
+}
+
+@-webkit-keyframes scale-up-hor-center {
+    0% {
+        -webkit-transform: scaleX(0.4);
+        transform: scaleX(0.4);
+    }
+
+    100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
+
+@keyframes scale-up-hor-center {
+    0% {
+        -webkit-transform: scaleX(0.4);
+        transform: scaleX(0.4);
+    }
+
+    100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
 }

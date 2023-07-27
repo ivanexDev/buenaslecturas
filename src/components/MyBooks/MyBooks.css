@@ -1,7 +1,4 @@
-.allbooks {
-    display: flex;
-    flex-direction: column;
-}
+/* .allbooks {} */
 
 .allbooks-container {
     flex-direction: column;

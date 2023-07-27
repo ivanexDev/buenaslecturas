@@ -1,5 +1,4 @@
 import { BookType } from "../../interfaces/api.interface";
-import useBookStore from "../../store/conterStore";
 import { AddRemoveButton } from "../AddRemoveButton";
 import "./Libro.css";
 import React from "react";
@@ -10,18 +9,12 @@ export type LibroProps = {
 };
 
 const Libro: React.FC<LibroProps> = ({ data, add }) => {
-	const { addFavBooks, removeBooks, removeFavBooks, addBooks } = useBookStore();
 	return (
 		<div className="book-card">
-			{/* rome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
 			<img
 				className="cover-book"
 				src={data.book.cover}
 				alt={`Portada del Libro ${data.book.title}`}
-				onClick={() => {
-					add ? addFavBooks(data) : addBooks(data);
-					add ? removeBooks(data) : removeFavBooks(data);
-				}}
 			/>
 			<div className="book-card-info">
 				<h3 className="book-title">{data.book.title}</h3>

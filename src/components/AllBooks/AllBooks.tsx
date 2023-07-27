@@ -15,8 +15,6 @@ const AllBooks: React.FC<AllBooksProps> = () => {
 		setcount(document.querySelector(".allbooks-container")?.childElementCount);
 	}, [genre, favBooks, books]);
 
-	console.log(count);
-
 	return (
 		<section className="allbooks">
 			<h2>Libros disponibles: {count} </h2>

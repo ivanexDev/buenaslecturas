@@ -1,3 +1,4 @@
+import db from "../../db.json";
 import { BookType } from "../interfaces/api.interface";
 import { create } from "zustand";
 
@@ -20,8 +21,7 @@ const useBookStore = create<bookState>((set) => ({
 	genre: "Todos",
 
 	getBooks: async () => {
-		const res = await fetch("http://localhost:3000/library");
-		const allBooks = await res.json();
+		const allBooks = await db.library;
 
 		set((_state) => ({ books: allBooks, filteredBooks: allBooks }));
 	},

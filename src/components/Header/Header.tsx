@@ -8,7 +8,6 @@ const Header: React.FC<HeaderProps> = () => {
 	const { setGenre } = useBookStore();
 	const { setNumberOfPages, numberOfPages } = useBookStore();
 
-	console.log(numberOfPages);
 	return (
 		<header className="header">
 			<h1>

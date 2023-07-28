@@ -1,7 +1,6 @@
 import db from "../../db.json";
 import { BookType } from "../interfaces/api.interface";
 import { create } from "zustand";
-import { shallow } from "zustand/shallow";
 
 interface bookState {
 	books: BookType[];
